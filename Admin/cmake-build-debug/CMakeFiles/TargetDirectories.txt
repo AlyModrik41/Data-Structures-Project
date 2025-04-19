@@ -1,0 +1,5 @@
+/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/untitled.dir
+/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/untitled_autogen_timestamp_deps.dir
+/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/untitled_autogen.dir
