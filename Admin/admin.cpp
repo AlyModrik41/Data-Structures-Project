@@ -80,6 +80,8 @@ void admin::add_prop(multiset<properties, CompareByPrice> *property_set,QWidget*
                      .arg(prop.get_price())
                      .arg(QString::fromStdString(prop.get_location()));
                  QLabel* label = new QLabel(info);
+                 label->setFixedHeight(30);
+                 label->setStyleSheet("background-color: red; padding: 2px; border-radius: 1px;");
                  mainLayout->addWidget(label);
              }
          }
