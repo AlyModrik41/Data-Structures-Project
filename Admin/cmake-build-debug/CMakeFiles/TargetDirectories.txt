@@ -1,5 +1,5 @@
-/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/untitled.dir
-/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/untitled_autogen_timestamp_deps.dir
-/Users/boody/Desktop/Admin/cmake-build-debug/CMakeFiles/untitled_autogen.dir
+/Users/boody/Desktop/Data-Structures-Project/Admin/cmake-build-debug/CMakeFiles/Admin.dir
+/Users/boody/Desktop/Data-Structures-Project/Admin/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/boody/Desktop/Data-Structures-Project/Admin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/boody/Desktop/Data-Structures-Project/Admin/cmake-build-debug/CMakeFiles/Admin_autogen_timestamp_deps.dir
+/Users/boody/Desktop/Data-Structures-Project/Admin/cmake-build-debug/CMakeFiles/Admin_autogen.dir
