@@ -15,7 +15,7 @@
 #include"properties.h"
 #include "admin.h"
 
-int main(int argc, char *argv[]) {
+int main1324(int argc, char *argv[]) {
     QApplication app(argc, argv);
     multiset<properties,CompareByPrice> property_set;
 
