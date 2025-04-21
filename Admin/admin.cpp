@@ -14,12 +14,33 @@ admin::~admin() {
 }
 
 void admin::add_prop(multiset<properties,bool(*)(const properties& a,const  properties& b)>&property_set) {
-    // properties p;
-    // p.set_price(1);
-    // p.set_status(true);
-    // p.set_owner(owner_input->text().toStdString());
-    // p.set_location(location_input->text().toStdString());
-    // property_set->insert(p);
+    int price;
+    string location,owner;
+    properties p;
+    p.set_status(true);
+    while (true) {
+        cout << "Enter property price: "<<endl;
+        cin >> price;
+
+
+        cout << "Enter property location: "<<endl;
+        cin>>location;
+
+
+        cout << "Enter owner's name: "<<endl;
+        cin>>owner;
+
+        if (owner==""||price<=0||location=="") {
+            cout<<"please fill all inputs"<<endl;
+        }else {
+            break;
+        }
+    }
+    std::cout << "\n✅ Property added successfully!\n";
+    p.set_price(price);
+    p.set_location(location);
+    p.set_owner(owner);
+    property_set.insert(p);
 }
 
 
