@@ -19,17 +19,31 @@ void showAdminMenu() {
 }
 int main(int argc, char *argv[]) {
     //multi set that saves the properties sorted using pointer function
-    multiset<properties,bool(*)(const properties& a,const  properties& b)> properties_set(compare);
-    showAdminMenu();
+    multiset<properties,bool(*)(const properties& a,const  properties& b)> property_set(compare);
     char n;
-    cin>>n;
-    switch (n) {
-        case 1:admin::add_prop(properties_set);
+    while (true) {
+        showAdminMenu();
+        cin>>n;
+        if (!(n>='0'&&n<='3')) {
+            cout<<"Invalid input please try again"<<endl;
+        }else{
+            switch (n) {
+                case '1':admin::add_prop(property_set);
                 break;
-        case 2:admin::update_prop();
+                case '2':admin::update_prop();
                 break;
-        case 3:admin::delete_prop();
+                case '3':admin::delete_prop();
                 break;
+            }
+            break;
+        }
+    }
+    for (properties p :property_set) {
+        std::cout << "========================================\n";
+        std::cout << "Price   : " << p.get_price() << "$\n";
+        std::cout << "Location: " << p.get_location() << "\n";
+        std::cout << "Owner   : " << p.get_owner() << "\n";
+        std::cout << "========================================\n";
     }
     return 0;
 }
