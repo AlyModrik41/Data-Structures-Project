@@ -1,21 +1,21 @@
 #include <QApplication>
-#include <QWidget>
+#include <QDebug>        // If you're printing with qDebug
+#include <QFormLayout>
 #include <QHBoxLayout>
 #include <QLabel>
-#include <QLineEdit>
-#include <QFormLayout>
-#include <QObject>       // Optional, since most widgets inherit from QObject
-#include <QLineEdit>     // Required for QLineEdit
 #include <QLabel>        // If you're using QLabel
-#include <QDebug>        // If you're printing with qDebug
-#include <QPushButton>
-#include "properties.h"
+#include <QLineEdit>
+#include <QLineEdit>     // Required for QLineEdit
 #include <QMessageBox>
+#include <QObject>       // Optional, since most widgets inherit from QObject
+#include <QPushButton>
+#include <QWidget>
 #include<set>
-#include"properties.h"
 #include "admin.h"
+#include "properties.h"
+#include"properties.h"
 
-int main1324(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     multiset<properties,CompareByPrice> property_set;
 
