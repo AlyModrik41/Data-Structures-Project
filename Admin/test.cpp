@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 
     //property list layout
     QVBoxLayout* propertyListLayout = new QVBoxLayout();
-asfdas
+asfdasdasf
 
     QVBoxLayout* mainLayout = new QVBoxLayout();
     mainLayout->addWidget(addBtn);
