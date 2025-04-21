@@ -36,7 +36,7 @@ void admin::add_prop(multiset<properties,bool(*)(const properties& a,const  prop
             break;
         }
     }
-    std::cout << "\n✅ Property added successfully!\n";
+    cout << "\n✅ Property added successfully!\n";
     p.set_price(price);
     p.set_location(location);
     p.set_owner(owner);
