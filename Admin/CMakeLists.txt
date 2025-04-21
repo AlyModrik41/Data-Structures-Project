@@ -12,7 +12,7 @@ set(CMAKE_PREFIX_PATH "/Users/boody/Qt/6.9.0/macos/lib/cmake")
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
 add_executable(Admin
-        main.cpp
+        test.cpp
         admin.cpp
         properties.cpp
 )
