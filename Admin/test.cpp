@@ -38,19 +38,11 @@ int main(int argc, char *argv[]) {
         }
     }
     for (properties p :property_set) {
-<<<<<<< HEAD
-        std::cout << "========================================\n";
-        std::cout << "Price   : " << p.get_price() << "$\n";
-        std::cout << "Location: " << p.get_location() << "\n";
-        std::cout << "Owner   : " << p.get_owner() << "\n";
-        std::cout << "========================================\n";
-=======
         cout << "========================================\n";
         cout << "Price   : " << p.get_price() << "$\n";
         cout << "Location: " << p.get_location() << "\n";
         cout << "Owner   : " << p.get_owner() << "\n";
         cout << "========================================\n";
->>>>>>> c66f8c4f5822efc321fcb45a977e35a2e861a840
     }
     return 0;
 }
