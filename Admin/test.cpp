@@ -20,10 +20,11 @@ int main(int argc, char *argv[]) {
     //multi set that saves the properties sorted using pointer function
     multiset<properties,bool(*)(const properties& a,const  properties& b)> property_set(compare);
     char n;
+    bool check=false;
     while (true) {
         showAdminMenu();
         cin>>n;
-        if (!(n>='0'&&n<='3')) {
+        if (!(n>='0'&&n<='4')) {
             cout<<"Invalid input please try again"<<endl;
         }else{
             switch (n) {
@@ -33,16 +34,14 @@ int main(int argc, char *argv[]) {
                 break;
                 case '3':admin::delete_prop();
                 break;
+                case '4':admin::all_prop(property_set);
+                break;
+                case '0':
+                    check=true;
+                         break;
             }
-            break;
+            if (check) break;
         }
-    }
-    for (properties p :property_set) {
-        cout << "========================================\n";
-        cout << "Price   : " << p.get_price() << "$\n";
-        cout << "Location: " << p.get_location() << "\n";
-        cout << "Owner   : " << p.get_owner() << "\n";
-        cout << "========================================\n";
     }
     return 0;
 }

@@ -16,9 +16,10 @@ admin::~admin() {
 void admin::add_prop(multiset<properties,bool(*)(const properties& a,const  properties& b)>&property_set) {
     int price;
     string location,owner;
+    char check;
     properties p;
     p.set_status(true);
-    while (true) {
+    do {
         cout << "Enter property price: "<<endl;
         cin >> price;
 
@@ -32,15 +33,20 @@ void admin::add_prop(multiset<properties,bool(*)(const properties& a,const  prop
 
         if (owner==""||price<=0||location=="") {
             cout<<"please fill all inputs"<<endl;
+
         }else {
-            break;
+            p.set_price(price);
+            p.set_location(location);
+            p.set_owner(owner);
+            property_set.insert(p);
+            cout << "\n✅ Property added successfully!\n"<<"do you want to add Another one?Y/N\n";
+            cin>>check;
         }
-    }
-    cout << "\n✅ Property added successfully!\n";
-    p.set_price(price);
-    p.set_location(location);
-    p.set_owner(owner);
-    property_set.insert(p);
+    }while (check=='y'||check=='Y');
+
+
+
+
 }
 
 
@@ -48,4 +54,14 @@ void admin::update_prop() {
 }
 
 void admin::delete_prop() {
+}
+void admin::all_prop(multiset<properties,bool(*)(const properties& a,const  properties& b)>&property_set) {
+    int count=1;
+    for (properties p :property_set) {
+        cout << "========================================\n"<<count++<<":\n";
+        cout << "Price   : " << p.get_price() << "$\n";
+        cout << "Location: " << p.get_location() << "\n";
+        cout << "Owner   : " << p.get_owner() << "\n";
+        cout << "========================================\n";
+    }
 }

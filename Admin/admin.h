@@ -16,6 +16,9 @@ public:
   static void add_prop(multiset<properties,bool(*)(const properties& a,const  properties& b)>&);
   static void update_prop();
   static void delete_prop();
+
+  static void all_prop(multiset<properties, bool(*)(const properties &a, const properties &b)> &);
+
   admin();
   ~admin();
 };
