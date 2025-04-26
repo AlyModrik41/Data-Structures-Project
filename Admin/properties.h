@@ -11,6 +11,7 @@ using namespace std;
 class properties {
 int price;
 bool status;
+  bool highlighted;
 string owner;
   string location;
 public:
@@ -21,9 +22,10 @@ public:
   void set_status(bool);
   void set_owner(string);
   void set_location(string);
-
+  void set_highlight(bool );
   int get_price() const;
   bool get_status() const;
+  bool get_highlight() const;
   string get_owner() const;
   string get_location() const;
 

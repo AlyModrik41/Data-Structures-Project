@@ -4,11 +4,11 @@
 
 #include "properties.h"
 
-properties::properties():price(0),status(false),owner("company"){
+properties::properties():price(0),status(false),owner("company"),highlighted(false){
 
 }
 
-properties::properties(int price):price(price),status(false),owner("company"){
+properties::properties(int price):price(price),status(false),owner("company"),highlighted(false){
 
 }
 
@@ -19,6 +19,9 @@ void properties::set_price(int price) {
     this->price=price;
 }
 
+void properties::set_highlight(bool H) {
+ highlighted=H;
+}
 void properties::set_status(bool status){
 this->status=status;
 }
@@ -42,3 +45,6 @@ string properties::get_location() const{
     return location;
 }
 
+bool properties::get_highlight() const{
+    return highlighted;
+}
