@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-test",
+      "appliesTo": "Admin/test.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-test",
+      "appliesTo": "Admin/test.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-main",
+      "appliesTo": "main.cpp",
+      "type": "launch"
+    }
+  ]
+}
