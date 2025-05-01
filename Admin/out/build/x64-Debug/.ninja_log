@@ -1,0 +1,16 @@
+# ninja log v5
+0	783	7671059348609904	CMakeFiles/Admin.dir/properties.cpp.obj	9618492f87513b48
+3	791	7671104379914843	CMakeFiles/Admin.dir/test.cpp.obj	355f0fd6dae2b435
+0	817	7671104380167598	CMakeFiles/Admin.dir/admin.cpp.obj	d8cee83df0849c80
+817	1165	7671104382659498	Admin.exe	82474275f672b275
+7	814	7678283536027883	CMakeFiles/Admin.dir/properties.cpp.obj	9618492f87513b48
+10	819	7678283536062895	CMakeFiles/Admin.dir/user.cpp.obj	ec07be8bf0c4bc12
+4	757	7678283915533322	CMakeFiles/Admin.dir/admin.cpp.obj	d8cee83df0849c80
+7	810	7678283916126556	CMakeFiles/Admin.dir/user.cpp.obj	ec07be8bf0c4bc12
+10	996	7678283917987305	CMakeFiles/Admin.dir/properties.cpp.obj	9618492f87513b48
+1	554	7678284054500987	CMakeFiles/Admin.dir/test.cpp.obj	355f0fd6dae2b435
+554	941	7678284057575874	Admin.exe	1922bbf1fe4bbc75
+0	751	7678284300854234	CMakeFiles/Admin.dir/test.cpp.obj	355f0fd6dae2b435
+752	1958	7678284312558128	Admin.exe	1922bbf1fe4bbc75
+0	588	7678284867385823	CMakeFiles/Admin.dir/test.cpp.obj	355f0fd6dae2b435
+589	769	7678284868852637	Admin.exe	1922bbf1fe4bbc75

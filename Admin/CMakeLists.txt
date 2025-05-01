@@ -7,4 +7,4 @@ add_executable(Admin
         test.cpp
         admin.cpp
         properties.cpp
-)
+ "user.cpp" "user.h")
