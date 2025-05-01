@@ -1,59 +1,48 @@
-#include <QApplication>
-#include <QWidget>
-#include <QHBoxLayout>
-#include <QLabel>
-#include <QLineEdit>
-#include <QFormLayout>
-#include <QObject>       // Optional, since most widgets inherit from QObject
-#include <QLineEdit>     // Required for QLineEdit
-#include <QLabel>        // If you're using QLabel
-#include <QDebug>        // If you're printing with qDebug
-#include <QPushButton>
-#include "properties.h"
-#include <QMessageBox>
 #include<set>
-#include"properties.h"
 #include "admin.h"
+#include "properties.h"
 
-int main1324(int argc, char *argv[]) {
-    QApplication app(argc, argv);
-    multiset<properties,CompareByPrice> property_set;
-
-    QWidget * mainWindow=new QWidget();
-    mainWindow->setWindowTitle("Main Window");
-    mainWindow->resize(300, 200);
-
-    //adding button (goes to admin adding function)
-    QPushButton *addBtn = new QPushButton("Add property");
-    addBtn->setFixedSize(100,40);
-
-    //property list layout
-    QVBoxLayout* propertyListLayout = new QVBoxLayout();
-
-
-    QVBoxLayout* mainLayout = new QVBoxLayout();
-    mainLayout->addWidget(addBtn);
-    mainLayout->addLayout(propertyListLayout);
-
-    mainWindow->setLayout(mainLayout);
-
-
-
-    QObject::connect(addBtn, &QPushButton::clicked, [&]() {
-     mainWindow->hide();
-    admin::add_prop(&property_set,mainWindow);
-});
-
-    for (const auto& p : property_set) {
-        QString text = QString("🏢 %1 | 💵 %2 | 📍 %3")
-                           .arg(QString::fromStdString(p.get_owner()))
-                           .arg(p.get_price())
-                           .arg(QString::fromStdString(p.get_location()));
-
-        QLabel* propertyLabel = new QLabel(text);
-        propertyListLayout->addWidget(propertyLabel);
+bool compare(const properties& a,const properties& b) {
+    return a.get_price() < b.get_price();
+}
+void showAdminMenu() {
+    cout << "========================================\n";
+    cout << "         🏠 Property Admin Panel         \n";
+    cout << "========================================\n";
+    cout << "Please choose an action from the list below:\n\n";
+    cout << "  [1] ➕ Add New Property\n";
+    cout << "  [2] ✏️  Edit Existing Property\n";
+    cout << "  [3] ❌ Delete Property\n";
+    cout << "  [4] 📋 Show All Properties\n";
+    cout << "  [0] 🚪 Logout / Exit\n";
+}
+int main(int argc, char *argv[]) {
+    //multi set that saves the properties sorted using pointer function
+    multiset<properties,bool(*)(const properties& a,const  properties& b)> property_set(compare);
+    char n;
+    bool check=false;
+    while (true) {
+        showAdminMenu();
+        cin>>n;
+        if (!(n>='0'&&n<='4')) {
+            cout<<"Invalid input please try again"<<endl;
+        }else{
+            switch (n) {
+                case '1':admin::add_prop(property_set);
+                break;
+                case '2':admin::update_prop();
+                break;
+                case '3':admin::delete_prop();
+                break;
+                case '4':admin::all_prop(property_set);
+                break;
+                case '0':
+                    check=true;
+                         break;
+            }
+            if (check) break;
+        }
     }
-    mainWindow->show();
-    return QApplication::exec();
+    return 0;
 }
 

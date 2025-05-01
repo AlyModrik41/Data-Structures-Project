@@ -5,7 +5,6 @@
 #ifndef PROPERTIES_H
 #define PROPERTIES_H
 #include <iostream>
-#include <qstring.h>
 using namespace std;
 
 
