@@ -6,8 +6,16 @@
 #define ADMIN_H
 #include<set>
 #include<iostream>
+
 #include "properties.h"
 using namespace std;
+     // If you're printing with qDebug
+#include "properties.h"
+struct CompareByPrice {
+  bool operator()(const properties& a, const properties& b) const {
+    return a.get_price() < b.get_price();
+  }
+};
 class admin {
   static const string username;
   static const string password;
